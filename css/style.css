@@ -1,0 +1,21 @@
+/*
+ * Voter Registration Centres Stylesheet
+ * -------------------------------------
+ * 
+ * This is a stylesheet to overide bootstrap elements and introduce new styling elements.
+ *
+ * Organization: Code 4 Kenya
+ * URI: http://code4kenya.org
+ *
+ * Author: David Lemayian
+ * URI: http://davidlemayian.com
+ *
+ */
+ 
+ footer img{
+ 	opacity: 0.5;
+ 	height: 50px;
+ }
+ 	footer img:hover{
+ 		opacity: 1.0;
+ 	}
