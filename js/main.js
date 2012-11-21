@@ -41,7 +41,7 @@ county_sel.onchange = function () {
 		ward_sel.innerHTML = "<option value=\"0\">Loading Wards...</option>";
 		
 		$("#found-reg").slideUp('fast');
-		header_name.innerHTML = unescape(toTitleCase(escape(county_sel.options[county_sel.value].innerHTML)))+" County";
+		header_name.innerHTML = unescape(toTitleCase(escape(county_sel.options[county_sel.value-1].innerHTML)))+" County";
 		
 		$("#reg-centres").innerHTML = "<tr><td>"+
 			"<p><img src=\"img/spinner.gif\" alt=\"\" />"+
