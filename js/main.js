@@ -37,7 +37,7 @@ county_sel.onchange = function () {
 	} else {
 		//found_reg.style.display = "inline-block";
 		$("#found-reg").slideUp('fast');
-		header_name.innerHTML = county_sel.options[county_sel.value].innerHTML+" County";
+		header_name.innerHTML = unescape(toTitleCase(escape(county_sel.options[county_sel.value].innerHTML)))+" County";
 		
 		$("#reg-centres").innerHTML = "<tr><td>"+
 			"<p><img src=\"img/spinner.gif\" alt=\"\" />"+
@@ -101,7 +101,7 @@ const_sel.onchange = function() {
 				"<tr><td><p>"+toTitleCase(centre_name[i])+"</p></td></tr>");
 		}
 		
-		header_name.innerHTML = toTitleCase(ward_name[0])+" Ward";
+		header_name.innerHTML = unescape(toTitleCase(escape(ward_name[0])))+" Ward";
 	}
 }
 
@@ -128,7 +128,7 @@ ward_sel.onchange = function() {
 				"<tr><td><p>"+toTitleCase(centre_name[i])+"</p></td></tr>");
 		}
 		
-		header_name.innerHTML = ward_sel.options[ward_sel.selectedIndex].text+" Ward";
+		header_name.innerHTML = unescape(toTitleCase(escape(ward_sel.options[ward_sel.selectedIndex].text)))+" Ward";
 	}
 }
 
@@ -146,6 +146,23 @@ function run_get_centres(table_id) {
 	xmlhttp.onreadystatechange = function(){
 		if (xmlhttp.readyState==4 && xmlhttp.status==200) {
 			json_result = jQuery.parseJSON(xmlhttp.responseText);
+			
+			var del_no = const_code.length;
+			for (var i = 0; i < del_no; i++) {
+				const_code.pop();
+				const_name.pop();
+			}
+			del_no = ward_code.length;
+			for (var i = 0; i < del_no; i++) {
+				ward_code.pop();
+				ward_name.pop();
+			}
+			del_no = centre_code.length;
+			for (var i = 0; i < del_no; i++) {
+				centre_code.pop();
+				centre_name.pop();
+			}
+			
 			
 			for (var i = 0; i < json_result.rows.length; i++){
 				if (i==0) {	
@@ -201,7 +218,7 @@ function run_get_centres(table_id) {
 					"<tr><td><p>"+toTitleCase(centre_name[i])+"</p></td></tr>");
 			}
 			
-			header_name.innerHTML = toTitleCase(ward_name[0])+" Ward";
+			header_name.innerHTML = unescape(toTitleCase(escape(ward_name[0])))+" Ward";
 			
 		}
 	}
@@ -224,6 +241,7 @@ function toTitleCase(str)
 {
     return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
+
 
 function goToByScroll(id){
       // Remove "link" from the ID
