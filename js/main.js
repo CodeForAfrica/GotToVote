@@ -185,6 +185,7 @@ function run_get_centres(table_id) {
 				}
 			}
 			
+			
 			const_sel.innerHTML = "";
 			for (var i = 0; i < const_code.length; i++) {
 				const_sel.innerHTML += "<option value=\""+const_code[i]+"\">"+toTitleCase(const_name[i])+"</option>";
