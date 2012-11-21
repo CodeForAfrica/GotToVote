@@ -41,12 +41,33 @@ body {
 }
 
 /* Supporting marketing content */
+#find-reg {
+	margin: 60px 0 30px;
+}
+
 .marketing {
 	margin: 60px 0;
 }
 .marketing p + h4 {
 	margin-top: 28px;
 }
+
+#found-reg{
+	margin: 10px auto;
+	display: inline-block;
+}
+	#found-reg td{
+		text-align: center;
+	}
+
+.social-icons{
+	text-align: center;
+	margin: 10px 0 20px;
+}
+	.social-icons a {
+		margin: 10px;
+	}
+
 
 .footer{
 	text-align: center;
