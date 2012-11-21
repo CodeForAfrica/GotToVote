@@ -28,14 +28,18 @@ var sql_2 = encodeURIComponent(" WHERE County_Code = "+county_code);
 var api_key = "&key=AIzaSyAwvkIls5mQybyp2R3g4FGiVetNdeVjUeE";
 
 county_sel.onchange = function () {
-	const_sel.innerHTML = "<option value=\"0\">- Select a County First -</option>";
-	ward_sel.innerHTML = "<option value=\"0\">- Select a County First -</option>";
+	
 	
 	if (county_sel.value==0) {
 		//Selected Default
 		county_sel.options[county_code].selected = "true";
 	} else {
-		//found_reg.style.display = "inline-block";
+		if (county_sel.options[0].value==0) {
+			county_sel.remove(0);
+		}
+		const_sel.innerHTML = "<option value=\"0\">Loading Constituencies... </option>";
+		ward_sel.innerHTML = "<option value=\"0\">Loading Wards...</option>";
+		
 		$("#found-reg").slideUp('fast');
 		header_name.innerHTML = unescape(toTitleCase(escape(county_sel.options[county_sel.value].innerHTML)))+" County";
 		
