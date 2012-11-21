@@ -224,3 +224,18 @@ function toTitleCase(str)
     return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 }
 
+function goToByScroll(id){
+      // Remove "link" from the ID
+    id = id.replace("link", "");
+      // Scroll
+    $('html,body').animate({
+        scrollTop: $("#"+id).offset().top},
+        'slow');
+}
+
+$("#jumbotron > a").click(function(e) { 
+      // Prevent a page reload when a link is pressed
+    e.preventDefault(); 
+      // Call the scroll function
+    goToByScroll($(this).attr("id"));           
+});

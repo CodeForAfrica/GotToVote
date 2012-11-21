@@ -39,10 +39,10 @@
         	
         	<hr>
         	
-        	<div class="jumbotron">
+        	<div class="jumbotron" id="jumbotron">
         		<h1>Register as a Voter Today!</h1>
         		<p class="lead">Voter registration for the Kenya 2013 Elections has begun. Find a voter registration centre and register to vote.</p>
-        		<a class="btn btn-large btn-success" href="#find">Find a Registration Centre</a>
+        		<a class="btn btn-large btn-success" href="#" id="findlink" onclick="$('#find').scrollTop();">Find a Registration Centre</a>
         	</div>
         	
         	<hr />
@@ -80,10 +80,11 @@
         			<li><a href="#" id="see_more">See more...</a></li>
         		</ul>
         	</td></tr></table>-->
-        	
+        	<a name="find" id="find"></a>
         	<hr />
+        	
 			
-			<div id="find-reg" style="text-align: center;"><a name="find"></a>
+			<div id="find-reg" style="text-align: center;">
 				<h2>Find A Registration Centre!</h2>
 			
 	        	<div class="row-fluid marketing" style="margin-top: 20px; margin-bottom: 10px;">
