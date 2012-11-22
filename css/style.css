@@ -16,7 +16,13 @@ body {
  	padding-top: 20px;
  	padding-bottom: 40px;
 }
- 
+
+.masthead ul{
+	margin-top: 23px;
+}
+.masthead img{
+	height: 60px;
+}
 /* Custom container */
 .container-narrow {
 	margin: 0 auto;
@@ -80,3 +86,15 @@ body {
  	.footer img:hover{
  		opacity: 1.0;
  	}
+ 	
+.partners{
+	text-align: center;
+}
+	.partners img{
+		padding: 10px;
+		opacity: 0.75;
+		height: 100px;
+	}
+	.partners img:hover{
+		opacity: 1.0;
+	}
