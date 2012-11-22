@@ -39,13 +39,12 @@ county_sel.onchange = function () {
 		}
 		const_sel.innerHTML = "<option value=\"0\">Loading Constituencies... </option>";
 		ward_sel.innerHTML = "<option value=\"0\">Loading Wards...</option>";
-		
-		$("#found-reg").slideUp('fast');
+
 		header_name.innerHTML = unescape(toTitleCase(escape(county_sel.options[county_sel.value-1].innerHTML)))+" County";
 		
-		$("#reg-centres").innerHTML = "<tr><td>"+
+		$("#reg-centres").html("<tr><td>"+
 			"<p><img src=\"img/spinner.gif\" alt=\"\" />"+
-			"Finding registration centres...</p></td></tr>";
+			"Finding registration centres...</p></td></tr>");
 		$("#found-reg").slideDown('fast');
 		
 		county_code = county_sel.value;
@@ -74,6 +73,8 @@ const_sel.onchange = function() {
 				if (ward_code.length==0) {
 					ward_code[0] = json_result.rows[i][5];
 					ward_name[0] = json_result.rows[i][6];
+					centre_code[0] = json_result.rows[i][7];
+					centre_name[0] = json_result.rows[i][8];
 				} else {
 					var ward_already = 0;
 					for (var c = 0; c < ward_code.length; c++) {
@@ -174,6 +175,8 @@ function run_get_centres(table_id) {
 					const_name[0] = json_result.rows[0][4];
 					ward_code[0] = json_result.rows[0][5];
 					ward_name[0] = json_result.rows[0][6];
+					centre_code[0] = json_result.rows[i][7];
+					centre_name[0] = json_result.rows[i][8];
 				} else {
 					var const_already = 0;
 					for (var c = 0; c < const_code.length; c++) {
