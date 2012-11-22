@@ -16,7 +16,13 @@ body {
  	padding-top: 20px;
  	padding-bottom: 40px;
 }
- 
+
+.masthead ul{
+	margin-top: 23px;
+}
+.masthead img{
+	height: 60px;
+}
 /* Custom container */
 .container-narrow {
 	margin: 0 auto;
