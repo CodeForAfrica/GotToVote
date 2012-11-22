@@ -86,3 +86,15 @@ body {
  	.footer img:hover{
  		opacity: 1.0;
  	}
+ 	
+.partners{
+	text-align: center;
+}
+	.partners img{
+		padding: 10px;
+		opacity: 0.75;
+		height: 100px;
+	}
+	.partners img:hover{
+		opacity: 1.0;
+	}
