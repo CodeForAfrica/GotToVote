@@ -89,6 +89,8 @@ body {
  	
 .partners{
 	text-align: center;
+	margin-bottom: 0;
+	margin-top: 70px;
 }
 	.partners img{
 		padding: 10px;
