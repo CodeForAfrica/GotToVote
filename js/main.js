@@ -29,7 +29,6 @@ var api_key = "&key=AIzaSyAwvkIls5mQybyp2R3g4FGiVetNdeVjUeE";
 
 county_sel.onchange = function () {
 	
-	
 	if (county_sel.value==0) {
 		//Selected Default
 		county_sel.options[county_code].selected = "true";
@@ -40,7 +39,7 @@ county_sel.onchange = function () {
 		const_sel.innerHTML = "<option value=\"0\">Loading Constituencies... </option>";
 		ward_sel.innerHTML = "<option value=\"0\">Loading Wards...</option>";
 
-		header_name.innerHTML = unescape(toTitleCase(escape(county_sel.options[county_sel.value-1].innerHTML)))+" County";
+		header_name.innerHTML = unescape(toTitleCase(escape(county_sel.options[county_sel.selectedIndex].innerHTML)))+" County";
 		
 		$("#reg-centres").html("<tr><td>"+
 			"<p><img src=\"img/spinner.gif\" alt=\"\" />"+
