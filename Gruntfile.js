@@ -15,6 +15,7 @@ module.exports = function(grunt) {
 				src: [
 					'./bower_components/jquery/jquery.js',
 					'./bower_components/bootstrap/dist/js/bootstrap.js',
+					'./app/assets/javascript/plugin.js',
 					'./app/assets/javascript/frontend.js'
 				],
 				dest: './public/assets/js/frontend.js',
@@ -23,10 +24,17 @@ module.exports = function(grunt) {
 				src: [
 					'./bower_components/jquery/jquery.js',
 					'./bower_components/bootstrap/dist/js/bootstrap.js',
+					'./app/assets/javascript/plugin.js',
 					'./app/assets/javascript/backend.js'
 				],
 				dest: './public/assets/js/backend.js',
 			},
+			js_modernizr: {
+				src: [
+					'./bower_components/modernizr/modernizr.js'
+				],
+				dest: './public/assets/js/modernizr.js',
+			}
 		},
 		less: {
 			development: {
@@ -56,6 +64,11 @@ module.exports = function(grunt) {
 					'./public/assets/js/backend.js': './public/assets/js/backend.js',
 				}
 			},
+			modernizr: {
+				files: {
+					'./public/assets/js/modernizr.js': './public/assets/js/modernizr.js',
+				}
+			},
 		},
 		phpunit: {
 			//...
@@ -74,6 +87,7 @@ module.exports = function(grunt) {
 					//watched files
 					'./bower_components/jquery/jquery.js',
 					'./bower_components/bootstrap/dist/js/bootstrap.js',
+					'./app/assets/javascript/plugin.js',
 					'./app/assets/javascript/frontend.js'
 				],   
 				tasks: ['concat:js_frontend','uglify:frontend'],     //tasks to run
@@ -86,9 +100,20 @@ module.exports = function(grunt) {
 					//watched files
 					'./bower_components/jquery/jquery.js',
 					'./bower_components/bootstrap/dist/js/bootstrap.js',
+					'./app/assets/javascript/plugin.js',
 					'./app/assets/javascript/backend.js'
 				],   
 				tasks: ['concat:js_backend','uglify:backend'],     //tasks to run
+				options: {
+					livereload: true                        //reloads the browser
+				}
+			},
+			js_modernizr: {
+				files: [
+					//watched files
+					'./bower_components/modernizr/modernizr.js'
+				],   
+				tasks: ['concat:js_modernizr','uglify:modernizr'],     //tasks to run
 				options: {
 					livereload: true                        //reloads the browser
 				}
