@@ -20,8 +20,31 @@
 		<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 		
-		<!-- Add your site or application content here -->
-		@yield('content')
+		<div class="container">
+			<div class="masthead">
+				<ul class="nav nav-pills pull-right">
+					<li class="active"><a href="/">Home</a></li>
+					<li><a href="about.html">About</a></li>
+				</ul>
+				<!--<h3 class="muted">Got To Vote! Ke</h3>-->
+				<a href="/"><img src="/assets/img/logo.png" alt="GotToVote Logo" /></a>
+			</div>
+
+			<hr>
+			
+			<!-- Add your site or application content here -->
+			@yield('content')
+			
+			<hr>
+			
+			<div class="footer">
+				<a href="http://code4kenya.org" target="_blank"><img src="/assets/img/c4k_logo.png" alt="Code 4 Kenya" /></a>
+				<a href="http://www.codeforafrica.org" target="_blank"><img src="/assets/img/c4a.png" alt="Code 4 Africa" /></a>
+			</div>
+
+		</div>
+		
+		
 		
 		<script src="/assets/js/frontend.js"></script>
 		
