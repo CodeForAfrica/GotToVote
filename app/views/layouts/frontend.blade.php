@@ -6,7 +6,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>GotToVote</title>
+		<title>GotToVote!</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
@@ -21,29 +21,25 @@
 		<![endif]-->
 		
 		<div class="container">
-			<div class="masthead">
+			<div class="header">
 				<ul class="nav nav-pills pull-right">
 					<li class="active"><a href="/">Home</a></li>
 					<li><a href="about.html">About</a></li>
 				</ul>
 				<!--<h3 class="muted">Got To Vote! Ke</h3>-->
-				<a href="/"><img src="/assets/img/logo.png" alt="GotToVote Logo" /></a>
+				<h3 class="text-muted"><a href="/">
+					<img src="/assets/img/logo.png" alt="GotToVote Logo" style="max-width: 90%; width: 200px; margin-top: -15px;" />
+				</a></h3>
 			</div>
-
-			<hr>
 			
 			<!-- Add your site or application content here -->
 			@yield('content')
 			
-			<hr>
-			
-			<div class="footer">
-				<a href="http://code4kenya.org" target="_blank"><img src="/assets/img/c4k_logo.png" alt="Code 4 Kenya" /></a>
+			<div class="footer text-center">
 				<a href="http://www.codeforafrica.org" target="_blank"><img src="/assets/img/c4a.png" alt="Code 4 Africa" /></a>
 			</div>
 
 		</div>
-		
 		
 		
 		<script src="/assets/js/frontend.js"></script>

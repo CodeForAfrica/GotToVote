@@ -1,4 +1,4 @@
-## GotToVote
+## GotToVote https://travis-ci.org/CodeForAfrica/GotToVote.png
 
 Enabling citizens to get to the ballot box informed and ready.
 

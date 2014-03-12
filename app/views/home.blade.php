@@ -1,25 +1,23 @@
 @extends('layouts.frontend')
 
 @section('content')
-    <div class="jumbotron" id="jumbotron">
+    <div class="jumbotron">
 		<h1>Register as a Voter Today!</h1>
 		<p class="lead">Voter registration for the Kenya 2013 Elections has begun. Find a voter registration centre and register to vote.</p>
-		<a class="btn btn-large btn-success" href="#" id="findlink" onclick="$('#find').scrollTop();">Find a Registration Centre</a>
+		<p><a class="btn btn-lg btn-success" href="#" id="findlink" onclick="$('#find').scrollTop();">Find a Registration Centre</a></p>
 	</div>
 
-	<hr />
-
-	<div class="row-fluid marketing">
+	<div class="row marketing">
 		<div class="col-md-6">
 			<h4>What is voter registration?</h4>
 			<p>Voter registration is the process of entering details of qualified persons including their National Identity Card or Passport numbers in a register or list of voters.</p>
 			
 			<h4>Who qualifies to register as a voter?</h4>
 			<p>In order to qualify as a voter, one must:</p>
-			<ul>
+			<p><ul>
 				<li><p>Be a Kenyan citizen</p></li>
 				<li><p>Be 18 years old and above</p></li>
-			</ul>
+			</ul></p>
 			
 			<h4>Can a person transfer as a voter to another registration centre or constituency?</h4>
 			<p>YES! A person may transfer as a voter to another registration centre within the constituency or outside the constituency. The person is required to present himself/ herself to the particular registration centre or constituency if he/she meets the requirements.</p>
@@ -42,13 +40,13 @@
     <hr />
     
     
-    <div id="find-reg" class="text-center">
+    <div id="find-reg" class="marketing text-center">
 	    <h2>Find A Registration Centre!</h2>
 	    
-	    <div class="row-fluid marketing" style="margin-top: 20px; margin-bottom: 10px;">
+	    <div class="row marketing" >
 		    <div class="col-md-4">
 			    <p class="lead">County</p>
-			    <select id="county_select">
+			    <select id="county_select" class="form-control">
 				    <option value="0">Select a County</option>
 				    <option value="30">Baringo</option>
 				    <option value="36">Bomet</option>
@@ -99,15 +97,15 @@
 				    <option value="24">West Pokot</option>
 			    </select>
 		    </div>
-		    <div class="col-md-4 text-center">
+		    <div class="col-md-4">
 			    <p class="lead">Constituency</p>
-			    <select id="const_select">
+			    <select id="const_select" class="form-control">
 			    	<option value="0">- Select a County First -</option>
 			    </select>
 		    </div>
-		    <div class="col-md-4 text-center">
+		    <div class="col-md-4">
 			    <p class="lead">Ward</p>
-			    <select id="ward_select">
+			    <select id="ward_select" class="form-control">
 			    	<option value="0">- Select a County First -</option>
 			    </select>
 		    </div>
@@ -124,26 +122,46 @@
 				    </td></tr>
 			    </tbody>
 		    </table>
-	    </div>
+	    </div> <!-- /#found-reg -->
+	    
     </div> <!-- /#find-reg -->
     
-    <div class="clearfix"></div>
-    <hr style="margin-top: 90px;"/>
+    <hr />
     
-    <div class="social-icons">
-	    <h3>Get Social</h3>
-	    <p> 
-		    <a href="javascript:void(0);" name="Share_TW" title="Share on Twitter | GotToVote! Ke"
-		    onClick='window.open("http://twitter.com/home?status=Register%20as%20a%20voter%20today!%20Find%20a%20registration%20center%20on%20http://gottovote.code4kenya.org%20%23GotToVote%20by%20@Code4Kenya","GotToVote","width=550,height=270");'><img src="img/social/twitter.png" alt="Share on Twitter" /></a>
-		    <a href="javascript:void(0);" name="Share_FB" title="Share on FB | GotToVote! Ke"
-		    onClick='window.open("http://www.facebook.com/sharer.php?u=http%3A%2F%2Fgottovote.code4kenya.org%2F&t=Register+as+a+voter+today!+Find+a+registration+center+on+Got+To+Vote.","GotToVote","width=550,height=270");'><img src="img/social/facebook.png" alt="Share on Facebook" /></a>
-		    <a href="https://plus.google.com/share?url=gottovote.code4kenya.org" onclick="javascript:window.open(this.href,
-		    '', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img src="img/social/googleplus.png" alt="Share on Google Plus" /></a>
-	    </p>
+    <div class="row marketing">
+    	<div class="col-md-6">
+    		<h3>About</h3>
+    		<p>GotToVote! is designed to help citizens get to the voting booth prepared and informed.</p>
+    		<h3>Get Social</h3>
+    		<p class="social-icons">
+    			<a href="javascript:void(0);" name="Share_TW" title="Share on Twitter | GotToVote! Ke"
+    			onClick='window.open("http://twitter.com/home?status=Register%20as%20a%20voter%20today!%20Find%20a%20registration%20center%20on%20http://gottovote.code4kenya.org%20%23GotToVote%20by%20@Code4Kenya","GotToVote","width=550,height=270");'>
+    				<span class="fa-stack fa-2x">
+    					<i class="fa fa-square-o fa-stack-2x"></i>
+    					<i class="fa fa-twitter fa-stack-1x"></i>
+    				</span>
+    			</a>
+    			<a href="javascript:void(0);" name="Share_FB" title="Share on FB | GotToVote! Ke"
+    			onClick='window.open("http://www.facebook.com/sharer.php?u=http%3A%2F%2Fgottovote.code4kenya.org%2F&t=Register+as+a+voter+today!+Find+a+registration+center+on+Got+To+Vote.","GotToVote","width=550,height=270");'>
+    				<span class="fa-stack fa-2x">
+    					<i class="fa fa-square-o fa-stack-2x"></i>
+    					<i class="fa fa-facebook fa-stack-1x"></i>
+    				</span>
+    			</a>
+    			<a href="https://plus.google.com/share?url=gottovote.code4kenya.org" onclick="javascript:window.open(this.href,
+    			'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+    				<span class="fa-stack fa-2x">
+    					<i class="fa fa-square-o fa-stack-2x"></i>
+    					<i class="fa fa-google-plus fa-stack-1x"></i>
+    				</span>
+    			</a>
+    		</p>
+    	</div>
+    	<div class="col-md-6">
+    		<a class="twitter-timeline" href="https://twitter.com/search?q=%23GotToVote" data-widget-id="443862671192903680">Tweets about "#GotToVote"</a>
+    		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    	</div>
     </div>
     
-    <table align="center"><tr><td>
-	    <a class="twitter-timeline" width="auto" href="https://twitter.com/search?q=%23GotToVote" data-widget-id="271009484485304320">Tweets about "#GotToVote"</a>
-	    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    </td></tr></table>
+   
 @stop
