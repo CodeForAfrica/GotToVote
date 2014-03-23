@@ -16,8 +16,8 @@
 		<form method="post" >
 			<div class="row">
 				<div class="col-md-6">
-					<label for="voter_no">Registration Number:</label>
-					<input type="text" name="voter_no" id="voter_no" class="form-control text-center" placeholder="806000013" value="<?php echo $voter_no; ?>" required />
+					<label for="reg_no">Registration Number:</label>
+					<input type="text" name="reg_no" id="reg_no" class="form-control text-center" placeholder="806000013" value="<?php echo $reg_no; ?>" required />
 					
 					<br />
 					

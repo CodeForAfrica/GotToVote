@@ -24,7 +24,7 @@ class VerificationController extends BaseController {
 		$recaptcha = ReCaptcha::create(Config::get('app.gtv.recaptcha.public_key'), Config::get('app.gtv.recaptcha.private_key'));
 		
 		return View::make('verify', array(
-			'voter_no' => '',
+			'reg_no' => '',
 			'message' => '<p>Enter your registration number first.</p>',
 			'recaptcha' => $recaptcha
 		));
@@ -33,7 +33,7 @@ class VerificationController extends BaseController {
 	public function verifyRegistration()
 	{
 		// Initialize variables
-		$voter_no = Input::get('voter_no');
+		$reg_no = Input::get('reg_no');
 		
 		// Check reCaptcha
 		$recaptcha = ReCaptcha::create(Config::get('app.gtv.recaptcha.public_key'), Config::get('app.gtv.recaptcha.private_key'));
@@ -42,19 +42,35 @@ class VerificationController extends BaseController {
 		if ($response->isValid()) 
 		{
 			// No voter number
-			if ($voter_no == '') {
+			if ($reg_no == '') {
 				$message = '<p class="text-danger">Enter your registration number first.</p>';
 				return View::make('verify', array(
-					'voter_no' => $voter_no,
+					'reg_no' => $reg_no,
 					'message' => $message,
 					'recaptcha' => $recaptcha
 				));
 			}
 			
+			// Validate registration no
+			$validator = Validator::make(
+			    array('reg_no' => $reg_no),
+			    array('reg_no' => 'numeric|min:5')
+			);
+			if ($validator->fails())
+			{
+			    // The given data did not pass validation
+			    $message = '<p class="text-danger">The registration number entered does not seem to be valid. Please check it and try again.</p>';
+			    return View::make('verify', array(
+			    	'reg_no' => $reg_no,
+			    	'message' => $message,
+			    	'recaptcha' => $recaptcha
+			    ));
+			}
+			
 			
 		    $message = '<p class="text-success">Success.</p>';
 		    return View::make('verify', array(
-		    	'voter_no' => $voter_no,
+		    	'reg_no' => $reg_no,
 		    	'message' => $message,
 		    	'recaptcha' => $recaptcha
 		    ));
@@ -63,13 +79,18 @@ class VerificationController extends BaseController {
 			// Captcha not valid
 		    $message = '<p class="text-danger">Captcha not valid. Please try again.</p>';
 		    return View::make('verify', array(
-		    	'voter_no' => $voter_no,
+		    	'reg_no' => $reg_no,
 		    	'message' => $message,
 		    	'recaptcha' => $recaptcha
 		    ));
 		}
 		
-		
+	}
+	
+	public function fetchFromAPI($reg_no)
+	{
+		$url = Config::get('app.gtv.recaptcha.private_key').'/web?reg_no='.$reg_no;
+		$response = file_get_contents('http://www.example.com/');
 	}
 
 }
