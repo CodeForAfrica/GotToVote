@@ -27,7 +27,7 @@
 				</ul>
 				<!--<h3 class="muted">Got To Vote! Ke</h3>-->
 				<h3 class="text-muted"><a href="/">
-					<img src="/assets/img/logo.png" alt="GotToVote Logo" style="max-width: 90%; width: 200px; margin-top: -15px;" />
+					MalawiVote
 				</a></h3>
 			</div>
 			
