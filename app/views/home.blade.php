@@ -1,5 +1,11 @@
 @extends('layouts.frontend')
 
+@section('top-nav')
+	<li class="active"><a href="/">Home</a></li>
+	<li><a href="/verify">Verify</a></li>
+	<li><a href="/about">About</a></li>
+@stop
+
 @section('content')
     <div class="jumbotron">
 		<h1>Register as a Voter Today!</h1>
@@ -132,6 +138,7 @@
     	<div class="col-md-6">
     		<h3>About</h3>
     		<p>GotToVote! is designed to help citizens get to the voting booth prepared and informed.</p>
+    		<p><a href="/about" class="btn btn-xs btn-default">Read more...</a></p>
     		<h3>Get Social</h3>
     		<p class="social-icons">
     			<a href="javascript:void(0);" name="Share_TW" title="Share on Twitter | GotToVote! Ke"

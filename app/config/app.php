@@ -174,5 +174,23 @@ return array(
 		'View'            => 'Illuminate\Support\Facades\View',
 
 	),
+	
+	/*
+	|--------------------------------------------------------------------------
+	| GotToVote Specific Configs
+	|--------------------------------------------------------------------------
+	|
+	*/
+	
+	'gtv' => array(
+		'api' => array(
+			'url' => '',
+			'auth_key' => '',
+		),
+		'recaptcha' => array(
+			'public_key' => '',
+			'private_key' => '',
+		),
+	),
 
 );

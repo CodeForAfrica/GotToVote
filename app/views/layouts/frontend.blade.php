@@ -23,8 +23,7 @@
 		<div class="container">
 			<div class="header">
 				<ul class="nav nav-pills pull-right">
-					<li class="active"><a href="/">Home</a></li>
-					<li><a href="about.html">About</a></li>
+					@yield('top-nav')
 				</ul>
 				<!--<h3 class="muted">Got To Vote! Ke</h3>-->
 				<h3 class="text-muted"><a href="/">

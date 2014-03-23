@@ -9,3 +9,7 @@ Thumbs.db
 
 /node_modules
 /bower_components
+
+# Environments
+/app/config/local/*
+/app/config/production/*

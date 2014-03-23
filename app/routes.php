@@ -12,3 +12,6 @@
 */
 
 Route::get('/', 'HomeController@showWelcome');
+Route::get('/verify', 'VerificationController@getIndex');
+Route::post('/verify', 'VerificationController@verifyRegistration');
+Route::get('/about', 'HomeController@showAbout');
