@@ -10,7 +10,7 @@
     <div class="jumbotron">
 		<h1>Confirm Your Registration Today!</h1>
 		<p class="lead">Voter registration confirmation for the Malawi 2014 Elections has begun. Confirm your registration information here.</p>
-		<p><a class="btn btn-lg btn-success" href="#" id="findlink" onclick="$('#find').scrollTop();">Confirm Registration</a></p>
+		<p><a class="btn btn-lg btn-success" href="/verify" >Confirm Registration</a></p>
 	</div>
 
 	<div class="row marketing">
