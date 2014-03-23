@@ -8,9 +8,9 @@
 
 @section('content')
     <div class="jumbotron">
-		<h1>Register as a Voter Today!</h1>
-		<p class="lead">Voter registration for the Kenya 2013 Elections has begun. Find a voter registration centre and register to vote.</p>
-		<p><a class="btn btn-lg btn-success" href="#" id="findlink" onclick="$('#find').scrollTop();">Find a Registration Centre</a></p>
+		<h1>Confirm Your Registration Today!</h1>
+		<p class="lead">Voter registration confirmation for the Malawi 2014 Elections has begun. Confirm your registration information here.</p>
+		<p><a class="btn btn-lg btn-success" href="#" id="findlink" onclick="$('#find').scrollTop();">Confirm Registration</a></p>
 	</div>
 
 	<div class="row marketing">
@@ -21,7 +21,7 @@
 			<h4>Who qualifies to register as a voter?</h4>
 			<p>In order to qualify as a voter, one must:</p>
 			<p><ul>
-				<li><p>Be a Kenyan citizen</p></li>
+				<li><p>Be a Malawi citizen</p></li>
 				<li><p>Be 18 years old and above</p></li>
 			</ul></p>
 			
