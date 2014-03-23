@@ -26,9 +26,9 @@
 					@yield('top-nav')
 				</ul>
 				<!--<h3 class="muted">Got To Vote! Ke</h3>-->
-				<h3 class="text-muted"><a href="/">
+				<h3 class="text-muted">
 					MalawiVote
-				</a></h3>
+				</h3>
 			</div>
 			
 			<!-- Add your site or application content here -->
