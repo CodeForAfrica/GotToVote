@@ -67,8 +67,8 @@ class VerificationController extends BaseController {
 			    ));
 			}
 			
-			
-		    $message = '<p class="text-success">Success.</p>';
+			// Fetch from GTV VRC API
+		    $message = $this->fetchFromAPI($reg_no);
 		    return View::make('verify', array(
 		    	'reg_no' => $reg_no,
 		    	'message' => $message,
@@ -89,8 +89,13 @@ class VerificationController extends BaseController {
 	
 	public function fetchFromAPI($reg_no)
 	{
-		$url = Config::get('app.gtv.recaptcha.private_key').'/web?reg_no='.$reg_no;
-		$response = file_get_contents('http://www.example.com/');
+		$url = Config::get('app.gtv.api.url').'/web?reg_no='.$reg_no;
+		$response = json_decode(file_get_contents($url));
+		if ($response->success == 'false') {
+			return '<p class="text-danger">'.$response->message.'</p>';
+		}
+		
+		return '<p class="text-success">'.$response->message.'</p>';
 	}
 
 }
