@@ -13,3 +13,6 @@ Thumbs.db
 # Environments
 /app/config/local/*
 /app/config/production/*
+
+#Jekyll
+_site
