@@ -11,13 +11,23 @@
 @import "variables.less";
 
 
-/* GLOBAL STYLES */
+/* Bootstrap Override */
 
-a {
+a, .btn {
 	-webkit-transition: all ease-in-out 0.2s;
    -moz-transition: all ease-in-out 0.2s;
    -o-transition: all ease-in-out 0.2s;
    transition: all ease-in-out 0.2s;
-   color: @nairobi-blue;
 }
 
+a {
+	color: @nairobi-blue;
+}
+
+.btn-info {
+	background-color: @nairobi-blue;
+	border-color: @nairobi-blue-dark;
+}
+	.btn-info:hover {
+		background-color: @nairobi-blue-dark;
+	}

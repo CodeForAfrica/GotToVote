@@ -28,7 +28,7 @@
 				</ul>
 				<!--<h3 class="muted">Got To Vote! Ke</h3>-->
 				<h2 class="text-muted">
-					MalawiVote
+					<img src="/assets/img/logos/meic.png" alt="" />
 				</h2>
 			</div>
 		</div>
