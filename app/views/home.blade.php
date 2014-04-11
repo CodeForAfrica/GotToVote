@@ -27,7 +27,7 @@
 			</ul></p>
 			
 			<h4>Can a person transfer as a voter to another registration centre or constituency?</h4>
-			<p>YES! A person may transfer as a voter to another registration centre within the constituency or outside the constituency. The person is required to present himself/ herself to the particular registration centre or constituency if he/she meets the requirements.</p>
+			<p>No. A person cannot transfer as a voter to another registration centre within the constituency or outside the constituency.</p>
 			
 		</div>
 		<div class="col-md-6">
