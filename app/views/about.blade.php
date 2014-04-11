@@ -37,8 +37,8 @@
 		<hr style="margin: 50px 0;"/>
 		
 		<p class="text-center">
-			<a href="https://github.com/CodeForAfrica/GotToVote" class="btn btn-lg btn-info"><i class="fa fa-github fa-lg"></i> Steal Our Code</a>
-			<a href="http://gottovote.cc" class="btn btn-lg btn-success"><img src="/assets/img/logos/gtv_sm.png" alt="" style="height: 18px;" /> GotToVote.cc</a>
+			<a href="https://github.com/CodeForAfrica/GotToVote" class="btn btn-lg btn-info" target="_blank"><i class="fa fa-github fa-lg"></i> Steal Our Code</a>
+			<a href="http://gottovote.cc" class="btn btn-lg btn-success" target="_blank"><img src="/assets/img/logos/gtv_sm.png" alt="" style="height: 18px;" /> GotToVote.cc</a>
 		</p>
 		
 	</div>
