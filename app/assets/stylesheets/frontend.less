@@ -5,8 +5,6 @@
 
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -19,10 +17,15 @@ body {
 
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
+  padding-top: 10px;
+  padding-bottom: 100px;
+  background: #FFFFFF url('/assets/img/mountains.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 /* Make the masthead heading the same height as the navigation */
-.header h3 {
+.header h2 {
   padding-bottom: 19px;
   margin-top: 0;
   margin-bottom: 0;
@@ -32,8 +35,8 @@ body {
 /* Custom page footer */
 .footer {
   padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+  //color: #fff;
+  //background-color: @nairobi-blue;
 }
 
 /* Customize container */
@@ -86,32 +89,72 @@ body {
 
 /*============  Global  ============*/
 
+.header .nav-pills>li.active>a, .header .nav-pills>li.active>a:hover, .header .nav-pills>li.active>a:focus {
+	background-color: @nairobi-blue;
+	color: #fff;
+}
+	.header .nav>li>a:hover, .header .nav>li>a:focus {
+		background-color: #fff;
+		color: @nairobi-blue;
+	}
+
+.footer a:hover {
+	opacity: 0.5;
+}
+.social-icons {
+	margin-left: -10px;
+}
 .social-icons a {
 	color: rgba(51, 51, 51, 1.0);
+	margin: 0 5px;
 }
+	.social-icons img {
+		width: 50px;
+		height: auto;
+		margin: 0;
+	}
 	.social-icons a:hover {
 		color: rgba(51, 51, 51, 0.5);
 		text-decoration: none;
 	}
-	.social-icons .fa-twitter {
-		color: #55acee;
-	}
-	.social-icons .fa-facebook {
-		color: #3b5998;
-	}
-	.social-icons .fa-google-plus {
-		color: #dd4b39;
-	}
-.footer a img {
-	height: 70px;
-	padding: 0 10px;
-	margin: 0 10px;
+
+.footer .partners img {
+	height: 50px;
+	margin-right: 10px;
+	margin-bottom: 10px;
 }
-	.footer a:hover {
-		opacity: 0.6;
+
+
+/*============     /     ============*/
+
+.jumbotron {
+	background: #fff;
+	padding: 0;
+}
+	.jumbotron h1 {
+		color: @nairobi-blue;
 	}
 
+
 /*============  /verify  ============*/
+
+.page-header h1, .page-header h2, .page-header h3 {
+	color: @nairobi-blue;
+}
 #recaptcha_area, #recaptcha_table {
 	margin: 0 auto;
 }
+
+
+/*============   /about  ============*/
+
+.about-partners a {
+	margin: 0 10px;
+}
+	.about-partners a:hover {
+		opacity: 0.6;
+	}
+	.about-partners a img {
+		height: 80px;
+		vertical-align: middle;
+	}
