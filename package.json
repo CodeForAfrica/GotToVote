@@ -1,0 +1,34 @@
+{
+  "name": "gottovote",
+  "version": "2.0.0",
+  "description": "Enabling citizens to get to the voting booth informed and ready.",
+  "main": "public/index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeForAfrica/GotToVote.git"
+  },
+  "keywords": [
+    "GotToVote",
+    "Elections"
+  ],
+  "author": "Code for Africa",
+  "license": {
+      "type": "GNU-v2",
+      "url": "https://github.com/CodeForAfrica/GotToVote/blob/master/LICENSE"
+    },
+  "bugs": {
+    "url": "https://github.com/CodeForAfrica/GotToVote/issues"
+  },
+  "homepage": "https://github.com/CodeForAfrica/GotToVote",
+  "devDependencies": {
+    "grunt": "~0.4.3",
+    "grunt-contrib-concat": "~0.3.0",
+    "grunt-contrib-less": "~0.10.0",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-phpunit": "~0.3.3"
+  }
+}

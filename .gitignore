@@ -1,3 +1,20 @@
-_site/
-
 *.DS_Store
+
+/bootstrap/compiled.php
+/vendor
+composer.phar
+composer.lock
+.env.local.php
+.env.php
+.DS_Store
+Thumbs.db
+
+/node_modules
+/bower_components
+
+# Environments
+/app/config/local/*
+/app/config/production/*
+
+#Jekyll
+_site
