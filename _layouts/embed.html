@@ -1,0 +1,18 @@
+---
+layout: default
+---
+
+<div class="embed">
+
+  {{ content }}
+
+  <p class="text-center">
+    <a href="{{ site.url }}">Powered by GotToVote</a>
+  </p>
+
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pym/1.2.1/pym.v1.min.js"></script>
+<script>
+    var pymChild = new pym.Child({ polling: 500 });
+</script>

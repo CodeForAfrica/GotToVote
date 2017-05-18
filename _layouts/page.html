@@ -1,0 +1,41 @@
+---
+layout: default
+---
+
+{% include header.html %}
+
+<div class="container">
+  <div class="row marketing" style="margin-top: 0;">
+    <div class="col-md-12">
+      <div class="page-header">
+        <h2>{{ page.title }}</h2>
+      </div>
+
+      {{ content }}
+
+      <br />
+      <p class="lead" style="text-align: center;"><b><em>We are Open!</em></b></p>
+      <p style="text-align: center;">
+        <a href="{{ site.openafrica_url }}" style="text-align: center;" class="btn btn-lg btn-success" target="_blank">
+          <i class="fa fa-database fa-lg"></i> Open Data
+        </a>
+        <a href="{{ site.github_url }}" style="text-align: center;" class="btn btn-lg btn-default" target="_blank">
+          <i class="fa fa-github fa-lg"></i> Open Source
+        </a>
+      </p>
+
+      <br/><br/>
+
+      <p style="text-align: center;"><a href="https://gottovote.cc" target="_blank" rel="noopener"><img src="img/logo_2.png" alt="" style="height: 70px;" /></a></p>
+      <p style="text-align: center; margin-bottom: 0;">Powered by <a href="http://gottovote.cc" target="_blank" rel="noopener">GotToVote.cc</a></p>
+
+    </div>
+  </div>
+
+  <hr/>
+  
+</div>
+
+{% include partners.html %}
+
+{% include footer.html %}

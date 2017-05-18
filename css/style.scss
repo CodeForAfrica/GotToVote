@@ -1,0 +1,242 @@
+---
+---
+/*
+* GotToVote Stylesheet
+* -------------------------------------
+*
+* This is a stylesheet to overide bootstrap elements and introduce new styling elements.
+*
+* Organization: Code for Africa
+* URI: https://codeforafrica.org
+*
+*/
+
+.alert {
+  a {
+    border-bottom: 1.5px dotted;
+    margin-left: 5px;
+    padding: 0 2px;
+    &:hover, &:focus{
+      border-bottom: 1.5px solid;
+      text-decoration: none;
+    }
+    &:first-child {
+      margin-left: 10px;
+    }
+  }
+}
+
+.header {
+  padding-top: 10px;
+  padding-bottom: 300px;
+  background: #fff url("../img/mountains.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  margin-bottom: -285px;
+
+  .logo {
+    height: 60px;
+    margin-top: -20px;
+  }
+
+  .nav-pills {
+    padding-top: 17px;
+    & > li {
+      & > a {
+        color: #5cb85c;
+        border-color: #4cae4c;
+        &:hover, &:focus {
+          background-color: #449d44;
+          border-color: #398439 !important;
+          color: #fff;
+        }
+      }
+      &.active > a{
+        background-color: #5cb85c;
+        border-color: #4cae4c;
+        color: #fff;
+        &:hover, &:focus {
+          background-color: #449d44;
+          border-color: #398439 !important;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.masthead ul {
+  margin-top: 23px;
+}
+.masthead img{
+  height: 60px;
+}
+/* Customize container */
+.container {
+  max-width: 700px;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+
+  h1 {
+    font-size: 72px;
+    line-height: 1;
+  }
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+
+/* Supporting marketing content */
+#find-reg {
+  margin: 60px 0 0px;
+}
+
+.marketing {
+  margin: 60px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+hr {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#found-reg {
+  margin: 10px auto;
+  display: inline-block;
+}
+#found-reg td {
+  text-align: center;
+}
+
+
+.partner-logos {
+  a {
+    margin: 10px;
+    img {
+      height: 80px;
+    }
+    &:hover, &:focus{
+      opacity: 0.6;
+    }
+  }
+
+  p {
+    margin-bottom: 20px;
+  }
+
+  p:nth-child(2) {
+    a img {
+      height: 60px;
+    }
+  }
+  
+}
+
+
+footer {
+  .about.bg-info {
+    background-color: #eee;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  a {
+    margin: 5px;
+    img {
+      height: 40px;
+    }
+    &:hover, &:focus {
+      opacity: 0.6;
+    }
+  }
+  
+  .social-icons {
+    text-align: center;
+    a {
+      color: #333;
+      margin: 0 5px;
+    }
+
+    img {
+      width: 40px;
+      height: auto;
+      margin: 0;
+    }
+  }
+}
+
+
+.widget.box {
+  margin: 0 auto;
+  max-width: 500px;
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .input-group {
+    margin-bottom: 20px;
+  }
+  .results {
+    margin-bottom: 20px;
+    .result {
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #cdcdcd;
+
+      p {
+        margin-bottom: 3px;
+      }
+
+      &:last-child{
+        border-bottom:none;
+      }
+    }
+  }
+}
+
+
+.home {
+  .header {
+    background: none;
+  }
+}
+
+.carousel-wrapper {
+  max-width: 920px;
+  margin: 10px auto;
+  img {
+    width: 100%;
+  }
+}
+
+.embed {
+  .embed-link {
+    display: none;
+  }
+}
+
+/** Find a registration Box CSS **/
+
+#embed-code, #embed-code-2 {
+    border-radius:4px !important;
+}
+#embed-link, #embed-link-2 {
+    text-align:center;
+    cursor:pointer;
+    text-decoration:underline;
+}
+.hide {
+    display: none;
+}

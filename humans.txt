@@ -4,6 +4,7 @@
 # TEAM
 
     <name> -- <role> -- <twitter>
+    David Lemayian -- Lead Technologist -- @DavidLemayian
 
 # THANKS
 
@@ -12,4 +13,4 @@
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    Normalize.css, jQuery, Modernizr
