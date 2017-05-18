@@ -1,0 +1,32 @@
+/** Find a registration Box CSS **/
+.big-box {
+    margin:0 auto;
+}
+.big-box h2 {
+    text-align:center;
+    margin-bottom: 30px;
+}
+.title {
+    font-weight:bold;
+}
+#embed-code, #embed-code-2 {
+    border-radius:4px !important;
+}
+#embed-link, #embed-link-2 {
+    text-align:center;
+    cursor:pointer;
+    text-decoration:underline;
+}
+.hide {
+    display:none;
+}
+.box {
+    border-bottom:1px solid #ccc;
+    padding:5px 0px;
+}
+img {
+    padding:-right:30px;
+}
+a {
+    color:#888;
+}
