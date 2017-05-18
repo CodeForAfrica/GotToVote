@@ -1,17 +1,18 @@
 title: GotToVote Kenya
-description: 
+description: Enabling citizens to get to the ballot box informed and ready.
+
+url: https://kenya.gottovote.cc
+enforce_ssl: kenya.gottovote.cc
 
 country: Kenya
 election_year: 2017
 
 registration_end_date: '-'
 
-api_key: AIzaSyAwvkIls5mQybyp2R3g4FGiVetNdeVjUeE
-table_id: 1Z8E12VbKZNAbiAsBBBgEcb3CiuIqDyaa-cdXQLq9
-
-url: https://kenya.gottovote.cc
-enforce_ssl: kenya.gottovote.cc
+google_api_key: AIzaSyAwvkIls5mQybyp2R3g4FGiVetNdeVjUeE
+google_fusion_table_id: 1Z8E12VbKZNAbiAsBBBgEcb3CiuIqDyaa-cdXQLq9
 
 google_analytics: UA-36749298-1
 
 openafrica_url: http://africaopendata.org/dataset/voter-registration-2016
+github_url: https://github.com/CodeForAfrica/GotToVote

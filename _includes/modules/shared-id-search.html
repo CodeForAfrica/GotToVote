@@ -1,0 +1,28 @@
+<div class="widget box">
+  <h2>Find out if you are sharing an ID number with someone else</h2>
+
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="input-group">
+        <input type="text" class="form-control" id="shared-id-name" placeholder="Enter your name as it appears on your National ID..." aria-describedby="shared-id-name-help"/>
+        <span class="input-group-btn">
+          <button class="btn btn-success" type="button"><i class="fa fa-btn fa-search"></i></button>
+        </span>
+      </div> <!-- /input-group -->
+
+      <div class="results" id="shared-id-results"></div>
+
+    </div>
+  </div>
+
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <i class="fa fa-exclamation-triangle"></i> If you find a match here, you should visit the nearest IEBC office.
+  </div>
+
+  <p class="embed-link" id="embed-link-2">Embed this tool</p>
+  <div id="embed-section-2" class="hide">
+    <textarea class="form-control" rows="3" id="embed-code-2" onClick="this.select();"><iframe src="{{ site.url }}/embed/shared-id-search" frameborder="0" scrolling="no" height="400px" width="100%"></iframe></textarea>
+  </div>
+
+</div>

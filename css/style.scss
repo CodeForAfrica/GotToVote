@@ -190,18 +190,14 @@ footer {
   }
 }
 
+.embed {
+  .embed-link {
+    display: none;
+  }
+}
 
 /** Find a registration Box CSS **/
-.big-box {
-    margin: 0 auto;
-}
-.big-box h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-.title {
-    font-weight:bold;
-}
+
 #embed-code, #embed-code-2 {
     border-radius:4px !important;
 }
