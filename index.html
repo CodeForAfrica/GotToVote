@@ -9,28 +9,28 @@ custom_js: main
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
   <p class="text-info text-left"><b>Registration ends on {{ site.registration_end_date }}.</b>
     All registration centres are open from 7:00am to 6:00pm each day including Saturdays and Sunday.</p>
-</div> -->
+  </div> -->
 
-<div class="jumbotron" id="jumbotron">
-  <h1>Register as a Voter Today!</h1>
-  <p class="lead">Voter registration for the {{ site.country }} {{ site.election_year }} Elections has begun.
-    Find a voter registration centre and register to vote.</p>
-  <p><a class="btn btn-large btn-success" href="#" id="findlink" onclick="javascript:goToByScroll('findlink');">Find a Registration Centre</a></p>
-</div>
+  <div class="jumbotron" id="jumbotron">
+    <h1>Register as a Voter Today!</h1>
+    <p class="lead">Voter registration for the {{ site.country }} {{ site.election_year }} Elections has begun.
+      Find a voter registration centre and register to vote.</p>
+      <p><a class="btn btn-large btn-success" href="#" id="findlink" onclick="javascript:goToByScroll('findlink');">Find a Registration Centre</a></p>
+    </div>
 
-<hr />
+    <hr />
 
-<div class="row marketing">
-  <div class="col-sm-6">
-    <h4>What is voter registration?</h4>
-    <p>Voter registration is the process of entering details of qualified persons including their National Identity Card or Passport numbers in a register or list of voters.</p>
+    <div class="row marketing">
+      <div class="col-sm-6">
+        <h4>What is voter registration?</h4>
+        <p>Voter registration is the process of entering details of qualified persons including their National Identity Card or Passport numbers in a register or list of voters.</p>
 
-    <h4>Who qualifies to register as a voter?</h4>
-    <p>In order to qualify as a voter, one must:</p>
-    <ul>
-      <li><p>Be a citizen of {{ site.country }}</p></li>
-      <li><p>Be 18 years old and above</p></li>
-    </ul>
+        <h4>Who qualifies to register as a voter?</h4>
+        <p>In order to qualify as a voter, one must:</p>
+        <ul>
+          <li><p>Be a citizen of {{ site.country }}</p></li>
+          <li><p>Be 18 years old and above</p></li>
+        </ul>
 
     <!-- <h4>Can a person transfer as a voter to another registration centre or constituency?</h4>
     <p>A person may transfer as a voter to another registration centre within the electoral area or outside the electoral area. The person is required to present himself/ herself to the particular registration centre if he/she meets the requirements.</p> -->
@@ -47,145 +47,157 @@ custom_js: main
     <p>It is the responsibility of each registered voter to inspect the register and inform the registration officers of any corrections they wish made in the register of voters on their particulars.</p> -->
   </div>
 </div>
+
 <a name="find" id="find"></a>
 <hr />
 
-<div class="row big-box">
-    <h2>Find out if you are sharing an ID number with someone else</h2>
-    <div class="col-sm-12">
-        <input type="text" class="form-control" id="shared-id-name" placeholder="Enter your name as it appears on your national ID"/>
+<div class="widget box">
+  <h2>Find out if you are sharing an ID number with someone else</h2>
+
+  <div class="row">
+    <div class="col-sm-10 col-sm-offset-1">
+      <div class="input-group">
+        <input type="text" class="form-control" id="shared-id-name" placeholder="Enter your name as it appears on your National ID..." aria-describedby="shared-id-name-help"/>
+        <span class="input-group-btn">
+          <button class="btn btn-success" type="button"><i class="fa fa-btn fa-search"></i></button>
+        </span>
+      </div> <!-- /input-group -->
+
+      <div class="results" id="shared-id-results"></div>
+
     </div>
-    <br class="clearfix"/><br/><br/>
-    <div class="col-sm-8 col-sm-offset-2">
-        <div class="well">
-            <div id="id-results-box"></div>
-            <p class="text-center">If you find your registration details here, you should visit the nearest IEBC office and report this matter.</p>
-        </div>
-    </div>
+  </div>
+
+  
+
+  <div class="alert alert-info alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <i class="fa fa-exclamation-triangle"></i> If you find a match here, you should visit the nearest IEBC office.
+  </div>
+
+  <p id="embed-link-2">Embed this tool</p>
+  <div id="embed-section-2" class="hide">
+    <textarea class="form-control" rows="3" id="embed-code-2" onClick="this.select();"><iframe src="https://kenya.gottovote.cc/shared-id-search" frameborder="0" scrolling="no" height="400px" width="100%"></iframe></textarea>
+  </div>
+
 </div>
 
-<div class="row">
-    <p id="embed-link-2">Embed</p>
-    <div id="embed-section-2" class="col-sm-8 col-sm-offset-2 hide">
-        <textarea class="form-control" rows="3" id="embed-code-2" onClick="this.select();"><iframe src="https://kenya.gottovote.cc/shared-id-search" frameborder="0" scrolling="no" height="400px" width="100%"></iframe></textarea>
-    </div>
-</div>
 
 <hr>
 
 <div class="row big-box">
-    <h2>Find your Registration Center!</h2>
-    <div class="col-sm-6">
-        <select class="county form-control" name="county">
-            <option>Select County</option>
-        </select>
+  <h2>Find your Registration Center!</h2>
+  <div class="col-sm-6">
+    <select class="county form-control" name="county">
+      <option>Select County</option>
+    </select>
+  </div>
+  <div class="col-sm-6">
+    <select class="constituency form-control" name="constituency">
+      <option>Select Constituency</option>
+    </select>
+  </div>
+  <br class="clearfix"/><br/><br/>
+  <div class="col-sm-8 col-sm-offset-2">
+    <div class="well">
+      <div id="results-box">
+        <p class="text-center"><em>Select a county first</em></p>
+      </div>
     </div>
-    <div class="col-sm-6">
-        <select class="constituency form-control" name="constituency">
-            <option>Select Constituency</option>
-        </select>
-    </div>
-    <br class="clearfix"/><br/><br/>
-    <div class="col-sm-8 col-sm-offset-2">
-        <div class="well">
-            <div id="results-box">
-                <p class="text-center"><em>Select a county first</em></p>
-            </div>
-        </div>
-    </div>
+  </div>
 </div>
 
 <div class="row">
-    <p id="embed-link">Embed</p>
-    <div id="embed-section" class="col-sm-8 col-sm-offset-2 hide">
-        <textarea class="form-control" rows="3" id="embed-code" onClick="this.select();"><iframe src="https://kenya.gottovote.cc/center-search" frameborder="0" scrolling="no" height="400px" width="100%"></iframe></textarea>
-    </div>
+  <p id="embed-link">Embed</p>
+  <div id="embed-section" class="col-sm-8 col-sm-offset-2 hide">
+    <textarea class="form-control" rows="3" id="embed-code" onClick="this.select();"><iframe src="https://kenya.gottovote.cc/center-search" frameborder="0" scrolling="no" height="400px" width="100%"></iframe></textarea>
+  </div>
 </div>
 
 <!--<div id="find-reg" class="text-center">-->
 <!--<h2>Find A Registration Centre!</h2>-->
 
-  <!--<div class="row marketing" style="margin-top: 20px;">-->
-    <!--<div class="col-md-6">-->
-      <!--<div>-->
-        <!--<p class="lead">County</p>-->
-        <!--<select id="county_select" class="form-control">-->
-            <!--<option value="0">Select a County</option>-->
-            <!--<option value="30">Baringo</option>-->
-            <!--<option value="36">Bomet</option>-->
-            <!--<option value="39">Bungoma</option>-->
-            <!--<option value="40">Busia</option>-->
-            <!--<option value="28">Elgeyo/Marakwet</option>-->
-            <!--<option value="14">Embu</option>-->
-            <!--<option value="7">Garissa</option>-->
-            <!--<option value="43">Homa Bay</option>-->
-            <!--<option value="11">Isiolo</option>-->
-            <!--<option value="34">Kajiado</option>-->
-            <!--<option value="37">Kakamega</option>-->
-            <!--<option value="35">Kericho</option>-->
-            <!--<option value="22">Kiambu</option>-->
-            <!--<option value="3">Kilifi</option>-->
-            <!--<option value="20">Kirinyaga</option>-->
-            <!--<option value="45">Kisii</option>-->
-            <!--<option value="42">Kisumu</option>-->
-            <!--<option value="15">Kitui</option>-->
-            <!--<option value="2">Kwale</option>-->
-            <!--<option value="31">Laikipia</option>-->
-            <!--<option value="5">Lamu</option>-->
-            <!--<option value="16">Machakos</option>-->
-            <!--<option value="17">Makueni</option>-->
-            <!--<option value="9">Mandera</option>-->
-            <!--<option value="10">Marsabit</option>-->
-            <!--<option value="12">Meru</option>-->
-            <!--<option value="44">Migori</option>-->
-            <!--<option value="1">Mombasa</option>-->
-            <!--<option value="21">Murang'a</option>-->
-            <!--<option value="47">Nairobi</option>-->
-            <!--<option value="32">Nakuru</option>-->
-            <!--<option value="29">Nandi</option>-->
-            <!--<option value="33">Narok</option>-->
-            <!--<option value="46">Nyamira</option>-->
-            <!--<option value="18">Nyandarua</option>-->
-            <!--<option value="19">Nyeri</option>-->
-            <!--<option value="25">Samburu</option>-->
-            <!--<option value="41">Siaya</option>-->
-            <!--<option value="6">Taita Taveta</option>-->
-            <!--<option value="4">Tana River</option>-->
-            <!--<option value="13">Tharaka - Nithi</option>-->
-            <!--<option value="26">Trans Nzoia</option>-->
-            <!--<option value="23">Turkana</option>-->
-            <!--<option value="27">Uasin Gishu</option>-->
-            <!--<option value="38">Vihiga</option>-->
-            <!--<option value="8">Wajir</option>-->
-            <!--<option value="24">West Pokot</option>-->
-        <!--</select>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--<div class="col-md-6">-->
-      <!--<div style="text-align: center;">-->
-        <!--<p class="lead">Constituency</p>-->
-        <!--<select id="const_select" class="form-control">-->
-          <!--<option value="0">- Select a Region First -</option>-->
-        <!--</select>-->
-      <!--</div>-->
-    <!--</div>-->
-    <!--&lt;!&ndash;<div class="col-md-4">&ndash;&gt;-->
-      <!--&lt;!&ndash;<div style="text-align: center;" >&ndash;&gt;-->
-        <!--&lt;!&ndash;<p class="lead">Ward</p>&ndash;&gt;-->
-        <!--&lt;!&ndash;<select id="ward_select" class="form-control">&ndash;&gt;-->
-          <!--&lt;!&ndash;<option value="0">- Select a Region First -</option>&ndash;&gt;-->
-        <!--&lt;!&ndash;</select>&ndash;&gt;-->
-      <!--&lt;!&ndash;</div>&ndash;&gt;-->
-    <!--&lt;!&ndash;</div>&ndash;&gt;-->
-  <!--</div>-->
+<!--<div class="row marketing" style="margin-top: 20px;">-->
+<!--<div class="col-md-6">-->
+<!--<div>-->
+<!--<p class="lead">County</p>-->
+<!--<select id="county_select" class="form-control">-->
+<!--<option value="0">Select a County</option>-->
+<!--<option value="30">Baringo</option>-->
+<!--<option value="36">Bomet</option>-->
+<!--<option value="39">Bungoma</option>-->
+<!--<option value="40">Busia</option>-->
+<!--<option value="28">Elgeyo/Marakwet</option>-->
+<!--<option value="14">Embu</option>-->
+<!--<option value="7">Garissa</option>-->
+<!--<option value="43">Homa Bay</option>-->
+<!--<option value="11">Isiolo</option>-->
+<!--<option value="34">Kajiado</option>-->
+<!--<option value="37">Kakamega</option>-->
+<!--<option value="35">Kericho</option>-->
+<!--<option value="22">Kiambu</option>-->
+<!--<option value="3">Kilifi</option>-->
+<!--<option value="20">Kirinyaga</option>-->
+<!--<option value="45">Kisii</option>-->
+<!--<option value="42">Kisumu</option>-->
+<!--<option value="15">Kitui</option>-->
+<!--<option value="2">Kwale</option>-->
+<!--<option value="31">Laikipia</option>-->
+<!--<option value="5">Lamu</option>-->
+<!--<option value="16">Machakos</option>-->
+<!--<option value="17">Makueni</option>-->
+<!--<option value="9">Mandera</option>-->
+<!--<option value="10">Marsabit</option>-->
+<!--<option value="12">Meru</option>-->
+<!--<option value="44">Migori</option>-->
+<!--<option value="1">Mombasa</option>-->
+<!--<option value="21">Murang'a</option>-->
+<!--<option value="47">Nairobi</option>-->
+<!--<option value="32">Nakuru</option>-->
+<!--<option value="29">Nandi</option>-->
+<!--<option value="33">Narok</option>-->
+<!--<option value="46">Nyamira</option>-->
+<!--<option value="18">Nyandarua</option>-->
+<!--<option value="19">Nyeri</option>-->
+<!--<option value="25">Samburu</option>-->
+<!--<option value="41">Siaya</option>-->
+<!--<option value="6">Taita Taveta</option>-->
+<!--<option value="4">Tana River</option>-->
+<!--<option value="13">Tharaka - Nithi</option>-->
+<!--<option value="26">Trans Nzoia</option>-->
+<!--<option value="23">Turkana</option>-->
+<!--<option value="27">Uasin Gishu</option>-->
+<!--<option value="38">Vihiga</option>-->
+<!--<option value="8">Wajir</option>-->
+<!--<option value="24">West Pokot</option>-->
+<!--</select>-->
+<!--</div>-->
+<!--</div>-->
+<!--<div class="col-md-6">-->
+<!--<div style="text-align: center;">-->
+<!--<p class="lead">Constituency</p>-->
+<!--<select id="const_select" class="form-control">-->
+<!--<option value="0">- Select a Region First -</option>-->
+<!--</select>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash;<div class="col-md-4">&ndash;&gt;-->
+<!--&lt;!&ndash;<div style="text-align: center;" >&ndash;&gt;-->
+<!--&lt;!&ndash;<p class="lead">Ward</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<select id="ward_select" class="form-control">&ndash;&gt;-->
+<!--&lt;!&ndash;<option value="0">- Select a Region First -</option>&ndash;&gt;-->
+<!--&lt;!&ndash;</select>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+<!--</div>-->
 
-  <!--<div id="found-reg" style="display: none;">-->
-    <!--<table class="table table-hover" style="margin-bottom: 0;">-->
-      <!--<thead><tr><td>-->
-        <!--<h4>Registration Centres in <span id="header-name">Region</span></h4>-->
-      <!--</td></tr></thead>-->
-      <!--<tbody id="reg-centres">-->
-      <!--</tbody>-->
-    <!--</table>-->
-  <!--</div>-->
+<!--<div id="found-reg" style="display: none;">-->
+<!--<table class="table table-hover" style="margin-bottom: 0;">-->
+<!--<thead><tr><td>-->
+<!--<h4>Registration Centres in <span id="header-name">Region</span></h4>-->
+<!--</td></tr></thead>-->
+<!--<tbody id="reg-centres">-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
 <!--</div>-->

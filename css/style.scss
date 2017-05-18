@@ -146,15 +146,46 @@ footer {
   }
   
   .social-icons {
+    text-align: center;
     a {
       color: #333;
       margin: 0 5px;
     }
 
     img {
-      width: 70px;
+      width: 40px;
       height: auto;
       margin: 0;
+    }
+  }
+}
+
+
+.widget.box {
+  margin: 0 auto;
+  max-width: 500px;
+
+  h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .input-group {
+    margin-bottom: 20px;
+  }
+  .results {
+    margin-bottom: 20px;
+    .result {
+      padding-bottom: 10px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #cdcdcd;
+
+      p {
+        margin-bottom: 3px;
+      }
+
+      &:last-child{
+        border-bottom:none;
+      }
     }
   }
 }
@@ -181,14 +212,4 @@ footer {
 }
 .hide {
     display: none;
-}
-.box {
-    border-bottom: 1px solid #ccc;
-    padding: 5px 0px;
-}
-img {
-    padding-right: 30px;
-}
-a {
-    color:#888;
 }

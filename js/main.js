@@ -2500,16 +2500,16 @@ function search_shared_ids(query) {
             } else {
                 for (var i = 0; i < list.length; i++) {
                     d = list[i].fields
-                    html += "<div class='box'>"
-                    html += "<p class='lead'>"+ to_title_case(d.full_name) +"</p>"
-                    html += "<p>County: "+ to_title_case(d.county_name) +"</p>"
-                    html += "<p>Constituency: "+ to_title_case(d.constituency) +"</p>"
-                    html += "<p> Ward: "+ to_title_case(d.caw) +"</p>"
-                    html += "<p>Polling Station: "+ to_title_case(d.polling_station) +"</p>"
-                    html += "</div>"
+                    html += '<div class="result">'
+                    html += '<p>' + to_title_case(d.full_name) + '</p>'
+                    html += '<p><small><strong>County:</strong> ' + to_title_case(d.county_name) + ', '
+                    html += '<strong>Constituency:</strong> ' + to_title_case(d.constituency) + ', '
+                    html += '<strong>Ward:</strong> ' + to_title_case(d.caw) + ', '
+                    html += '<strong>Polling Station:</strong> ' + to_title_case(d.polling_station) + '</small></p>'
+                    html += '</div>'
                 }
             }
-            $('#id-results-box').html(html)
+            $('#shared-id-results').html(html)
         })
     })
 }

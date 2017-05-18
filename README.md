@@ -11,7 +11,11 @@ The PDF was scraped and made available in the form of a website with three drops
 
 This unprecedented ease of finding your registration centre spurred adoption of GotToVote's simple code in Zimbabwe, Ghana and Malawi. Code4Africa continues to this day in ensuring citizens get to the ballot box prepared by adding more arsenal of what GotToVote can offer and has grown to include Peace Messaging, Polling Results and Voter Registration Confirmation (VRC).
 
-Please check out our much prettier presentation of GotToVote here: https://gottovote.cc/
+Please check out our much prettier presentation of GotToVote here: https://gottovote.cc/\
+
+### GotToVote RCI
+
+The GotToVote Registration Centres Information (R.C.I.) module. This easily redeploy-able website gives citizens the opportunity to easily drill-down for their nearest polling/registration centre. Built on Jekyll with data on Fusion Tables. Deployable using Github Pages. Accessible at https://kenya.gottovote.cc/ 
 
 
 ### Installation
