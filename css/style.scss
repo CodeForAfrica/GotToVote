@@ -1,15 +1,30 @@
 ---
 ---
 /*
-* Voter Registration Centres Stylesheet
+* GotToVote Stylesheet
 * -------------------------------------
 *
 * This is a stylesheet to overide bootstrap elements and introduce new styling elements.
 *
 * Organization: Code for Africa
-* URI: http://www.codeforafrica.org
+* URI: https://codeforafrica.org
 *
 */
+
+.alert {
+  a {
+    border-bottom: 1.5px dotted;
+    margin-left: 5px;
+    padding: 0 2px;
+    &:hover, &:focus{
+      border-bottom: 1.5px solid;
+      text-decoration: none;
+    }
+    &:first-child {
+      margin-left: 10px;
+    }
+  }
+}
 
 .header {
   padding-top: 10px;
@@ -18,7 +33,7 @@
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: center top;
-  margin-bottom: -250px;
+  margin-bottom: -285px;
 
   .logo {
     height: 60px;
@@ -26,6 +41,7 @@
   }
 
   .nav-pills {
+    padding-top: 17px;
     & > li {
       & > a {
         color: #5cb85c;
@@ -187,6 +203,21 @@ footer {
         border-bottom:none;
       }
     }
+  }
+}
+
+
+.home {
+  .header {
+    background: none;
+  }
+}
+
+.carousel-wrapper {
+  max-width: 920px;
+  margin: 10px auto;
+  img {
+    width: 100%;
   }
 }
 
