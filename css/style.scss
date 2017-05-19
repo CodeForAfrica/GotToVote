@@ -11,6 +11,10 @@
 *
 */
 
+img {
+  max-width: 100%;
+}
+
 .alert {
   a {
     border-bottom: 1.5px dotted;
@@ -35,9 +39,8 @@
   background-position: center top;
   margin-bottom: -285px;
 
-  .logo {
+  img.logo {
     height: 60px;
-    margin-top: -20px;
   }
 
   .nav-pills {
@@ -125,6 +128,7 @@ hr {
     margin: 10px;
     img {
       height: 80px;
+      padding: 5px;
     }
     &:hover, &:focus{
       opacity: 0.6;
@@ -154,7 +158,8 @@ footer {
   a {
     margin: 5px;
     img {
-      height: 40px;
+      max-height: 40px;
+      margin: 0 5px 10px 0;
     }
     &:hover, &:focus {
       opacity: 0.6;
@@ -171,7 +176,6 @@ footer {
     img {
       width: 40px;
       height: auto;
-      margin: 0;
     }
   }
 }
