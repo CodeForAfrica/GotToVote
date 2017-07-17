@@ -1,10 +1,7 @@
 
 ![GoToVote Logo](/img/logo_2.png)
 
-## GotToVote
-
-
-_Enabling citizens to get to the ballot box informed and ready._
+### _Enabling citizens to get to the ballot box informed and ready._
 
 GotToVote started off as a simple experiment to make data otherwise locked in government, useful to the general public.
 
