@@ -58,6 +58,6 @@ There are thousands of civic apps and other technology solutions already availab
 
 Code for Africa is committed to help grow these resources and the global civic technology community, by making its <a href="https://github.com/CodeForAfrica" target="_blank">code</a> and <a href="http://openafrica.net/" target="_blank">data</a> freely available. It is also committed to helping fellow African citizen agency organisations re-purpose and customise existing civic code as cost-effectively as possible.
 
-The code for GotToVote! {{ site.country }} is available <a href="https://github.com/CodeForAfrica/GotToVote-RCI.{{ site.country }}" target="_blank">here</a>.
+The code for GotToVote! {{ site.country }} is available <a href="{{ site.github_url }}" target="_blank">here</a>.
 
 All the data used by the {{ site.country }} project and other initiatives is available for free reuse on the <a href="http://openafrica.net/" target="_blank">openAFRICA.net</a> portal. It is already the continent's largest repository of public data, despite being volunteer run, and offers data ranging from government budget and tender information, to data about parliamentarians and other public officials.
